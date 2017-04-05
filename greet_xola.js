@@ -10,18 +10,15 @@ const greet = require('./greet');
 
 const styledMessage = greet('Xola');
 
-
-console.log(styledMessage);
-
-figlet("Christian", function(err, data) {
+figlet(styledMessage, function(err, data) {
    if (err) {
        console.log('Something went wrong...!');
        console.log(err);
        return;
    } 
     
-//console.log(data);
+console.log(chalk.bgBlack.red(data));
     
 });
 
-console.log(figures.heart + " " + figures('NodeJS'));
+//console.log(figures.heart + " " + figures('NodeJS'));
